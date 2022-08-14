@@ -1,13 +1,12 @@
 package resources;
 
-import values.Card;
+import static views.Constants.*;
 
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
-import static views.Constants.DECK_COUNT;
-import static views.Constants.HAND_COUNT;
+import values.Card;
 
 public class Algo {
     private LoseB loseB;
@@ -32,11 +31,12 @@ public class Algo {
     boolean isATurn;
 
     public Algo() {
+        
         ///モデル生成分
         loseB = new LoseB();
         handsB = new HandsB(loseB);
-        handsA = new HandsA();
-        loseA = new LoseA(handsA);
+        loseA = new LoseA();
+        handsA = new HandsA(loseA);
         deck = new Deck();
         attackerA = new AttackerA();
         attackerB = new AttackerB();
