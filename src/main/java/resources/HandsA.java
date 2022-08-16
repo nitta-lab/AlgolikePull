@@ -10,6 +10,7 @@ public class HandsA {
     private Map.Entry<Boolean, Integer> resultByDrawingB;
     private Map.Entry<Boolean, Integer> resultByDrawingA;
     private List<Card> value = new ArrayList<Card>();
+    LoseA loseA;
 
     public List<Card> getValue() {
         return value;
