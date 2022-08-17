@@ -10,6 +10,11 @@ public class HandsA {
     private Map.Entry<Boolean, Integer> resultByDrawingB;
     private Map.Entry<Boolean, Integer> resultByDrawingA;
     private List<Card> value = new ArrayList<Card>();
+    private LoseA loseA;
+
+    public HandsA(LoseA loseA) {
+        this.loseA = loseA;
+    }
 
     public List<Card> getValue() {
         return value;
@@ -25,6 +30,7 @@ public class HandsA {
             temp_if3 = this.value;
         }
         value = temp_if3;
+        loseA.updateHandsA(value);
     }
 
     public void updateResultBySelectingB(Map.Entry<Boolean, Map.Entry<Integer, Integer>> resultBySelectingB) {
@@ -37,6 +43,7 @@ public class HandsA {
             temp_if4 = this.value;
         }
         value = temp_if4;
+        loseA.updateHandsA(value);
     }
 
     public void updateResultByDrawingB(Map.Entry<Boolean, Integer> resultByDrawingB, List<Card> deck) {
@@ -49,6 +56,7 @@ public class HandsA {
             temp_if6 = this.value;
         }
         value = temp_if6;
+        loseA.updateHandsA(value);
     }
 
     public void updateResultByDrawingA(Map.Entry<Boolean, Integer> resultByDrawingA, List<Card> deck) {
@@ -64,5 +72,6 @@ public class HandsA {
             temp_if7 = this.value;
         }
         value = temp_if7;
+        loseA.updateHandsA(value);
     }
 }
