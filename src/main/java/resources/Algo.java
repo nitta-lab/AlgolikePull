@@ -35,8 +35,8 @@ public class Algo {
         ///モデル生成分
         loseB = new LoseB();
         handsB = new HandsB(loseB);
-        handsA = new HandsA();
-        loseA = new LoseA(handsA);
+        loseA = new LoseA();
+        handsA = new HandsA(loseA);
         deck = new Deck();
         attackerA = new AttackerA();
         attackerB = new AttackerB();

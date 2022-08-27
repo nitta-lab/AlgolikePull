@@ -7,20 +7,23 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class LoseA {
-    HandsA handsA;
 
-    public LoseA(HandsA handsA) {
-        this.handsA = handsA;
+	private boolean value;
+    public LoseA() {
     }
 
     public boolean getValue() {
-        boolean result = true;
-        for (Card card : this.handsA.getValue()) {
+        return this.value;
+    }
+    
+    public void updateHandsA(List<Card> handsA) {
+    	this.value = true;
+        for (Card card : handsA) {
             if (!card.isFace()) {
-                result = false;
+            	this.value = false;
                 break;
             }
         }
-        return result;
+
     }
 }
