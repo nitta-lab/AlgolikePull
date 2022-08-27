@@ -1,11 +1,8 @@
 package resources;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-
 import values.Card;
+
+import java.util.*;
 
 public class HandsA {
     private Map.Entry<Boolean, Map.Entry<Integer, Integer>> resultBySelectingA;
@@ -14,10 +11,6 @@ public class HandsA {
     private Map.Entry<Boolean, Integer> resultByDrawingA;
     private List<Card> value = new ArrayList<Card>();
 
-    public HandsA(){
-    	
-    }
-    
     public List<Card> getValue() {
         return value;
     }
